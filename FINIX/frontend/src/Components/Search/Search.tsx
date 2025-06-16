@@ -2,23 +2,18 @@ import React, { useState, type SyntheticEvent } from 'react'
 import './Search.css'
 
 type Props = {
-  onClick: (e: SyntheticEvent)=>void;
+  onSearchSubmit: (e: SyntheticEvent)=>void;
   search: string;
-  handleOnChange: (e: SyntheticEvent)=>void;
+  handleSearchChange: (e: SyntheticEvent)=>void;
 }
 
-const Search = ({onClick, search, handleOnChange}: Props) => {
+const Search = ({onSearchSubmit, search, handleSearchChange}: Props) => {
   return (
-    <div className="search-container">
-  <input
-    value={search}
-    type="text"
-    placeholder="Search stocks..."
-    className="search-input"
-    onChange={handleOnChange}
-  />
-  <button onClick={onClick}>Search</button>
-</div>
+    <>
+    <form onSubmit={onSearchSubmit} className='search-container'>
+      <input onChange={handleSearchChange} value={search} className='search-input'/>
+    </form>
+    </>
 
   )
 }

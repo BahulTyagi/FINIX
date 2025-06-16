@@ -1,21 +1,25 @@
-import React from 'react'
+import React, { type SyntheticEvent } from 'react'
 import Card from '../Card/Card'
 import './CardList.css'
-type Props = {}
+import type { CompanyNameSearch } from '../../company'
+type Props = {
+  searchResult: CompanyNameSearch[];
+  onPortfolioCreate: (e:SyntheticEvent)=>void;
+}
 
 
-const companies=[
-    {CompanyName: 'AAPL', Ticker:'no tick tock', Price: 24},
-    {CompanyName: 'AAPL', Ticker:'no tick tock', Price: 24},
-    {CompanyName: 'AAPL', Ticker:'no tick tock', Price: 24}
-];
 
-const CardList = (props: Props) => {
+const CardList = ({searchResult, onPortfolioCreate}: Props) => {
+
+  console.log("Final SearchResult goes like :", searchResult);
+
   return (
     <>
-    {companies.map((com, index)=>(
-         <Card key={index} CompanyName={com.CompanyName} Ticker={com.Ticker} price={com.Price}/>   
-    ))};
+    {searchResult?.length>0 ? (searchResult.map((res, index)=>(
+         <Card onPortfolioCreate={onPortfolioCreate} key={index} name={res.name} symbol={res.symbol} currency={res.currency}/>   
+    ))) : (
+      <h2>No Result found!</h2>
+    )};
     </>
   )
 }
