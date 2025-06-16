@@ -30,7 +30,7 @@ function App() {
 
     const onPortfolioCreate=(e:any)=>{
       e.preventDefault();
-       console.log(e);
+       console.log("onPortfolioCreate Triggered : "+e);
        const exists=portfolioValues.find((val)=>val===e.target[0].value);
        if(!exists)
        {
@@ -40,11 +40,18 @@ function App() {
       console.log(e);
     }
 
+    const onPortfolioDelete=(e:any)=>{
+      e.preventDefault();
+      console.log("onPortfolioDelete Triggered");
+      const removed=portfolioValues.filter((val)=>(val!=e.target[0].value));
+      setPortfolioValues(removed);
+    }
+
   return (
     <>
     <Search onSearchSubmit={onSearchSubmit} search={search} handleSearchChange={handleSearchChange}/>
     {serverError && <h2>SOME NETWORK ERROR OCCURED</h2>}
-    <ListPortfolio portfolioValues={portfolioValues}/>
+    <ListPortfolio onPortfolioDelete={onPortfolioDelete} portfolioValues={portfolioValues}/>
      <div className="cardlist">
       <CardList onPortfolioCreate={onPortfolioCreate} searchResult={searchResult}></CardList>
      </div>
