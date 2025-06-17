@@ -1,0 +1,30 @@
+.navbar{
+    display: flex;
+    /* flex-direction: column; */
+    width: 100%;
+    background-color: grey;
+    text-align: center;
+    height: 50px;
+    justify-content:space-between;
+    align-items: center;
+}
+
+.navbar div{
+    display: flex;
+    align-items: center;
+    margin-left: 10px;
+    text-decoration: none;
+}
+
+.button{
+    justify-content: flex-end;
+    width: 150px;
+    margin: 5px;
+    height: 30px;
+}
+
+.buttons{
+    display: flex;
+    align-items: center;
+}
+

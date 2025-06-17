@@ -11,7 +11,7 @@ const Search = ({onSearchSubmit, search, handleSearchChange}: Props) => {
   return (
     <>
     <form onSubmit={onSearchSubmit} className='search-container'>
-      <input onChange={handleSearchChange} value={search} className='search-input'/>
+      <input onChange={handleSearchChange} placeholder='Search' value={search} className='search-input'/>
     </form>
     </>
 
