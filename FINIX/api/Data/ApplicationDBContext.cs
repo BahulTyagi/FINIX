@@ -20,11 +20,29 @@ namespace api.Data
             base.OnModelCreating(modelBuilder);
 
 
-            //seeding data into table
-            modelBuilder.Entity<Stock>().HasData(
-                new Stock
+             modelBuilder.Entity<Comment>().HasData(
+                new Comment
                 {
                     Id = 1,
+                    Title = "Apple News",
+                    Content = "Apple launches new iPhone.",
+                    CreatedOn = new DateTime(2024, 10, 5),
+                    StockId = 10
+                }, new Comment
+                {
+                    Id = 3,
+                    Title = "Market Overview",
+                    Content = "Stocks fluctuate after Fed announcement.",
+                    CreatedOn = new DateTime(2024, 12, 1),
+                    StockId = 20 
+                });
+
+
+        //seeding data into table
+        modelBuilder.Entity<Stock>().HasData(
+                new Stock
+                {
+                    Id = 10,
                     Symbol = "AAPL",
                     CompanyName = "Apple Inc.",
                     Description = "Consumer electronics and software company",
@@ -35,7 +53,7 @@ namespace api.Data
                 },
                 new Stock
                 {
-                    Id = 2,
+                    Id = 20,
                     Symbol = "MSFT",
                     CompanyName = "Microsoft Corporation",
                     Description = "Software and cloud computing",
