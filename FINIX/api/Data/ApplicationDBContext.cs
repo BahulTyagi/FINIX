@@ -18,6 +18,9 @@ namespace api.Data
        protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             base.OnModelCreating(modelBuilder);
+
+
+            //seeding data into table
             modelBuilder.Entity<Stock>().HasData(
                 new Stock
                 {
