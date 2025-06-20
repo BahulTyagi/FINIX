@@ -1,5 +1,6 @@
 ﻿using api.Data;
 using api.Dtos.Stock;
+using api.Helper;
 using api.Interfaces;
 using api.Mapper;
 using api.Models;
@@ -23,15 +24,15 @@ namespace api.Controllers
         }
 
         [HttpGet]
-        public async Task<IActionResult> GetAll()
+        public async Task<IActionResult> GetAll([FromQuery] QueryObject query)
         {
-            var stocks = await _stockRepository.GetAllAsync();
+            var stocks = await _stockRepository.GetAllAsync(query);
 
             var stockDto=stocks.Select(item => item.ToStockDto());
             return Ok(stockDto);
         }
 
-        [HttpGet("{id}")]
+        [HttpGet("{id:int}")]
         public async Task<IActionResult> GetById([FromRoute] int id)
         {
             var stocks = await _stockRepository.GetByIdAsync(id);
@@ -50,7 +51,7 @@ namespace api.Controllers
             return CreatedAtAction(nameof(GetById), new { Id = stock.Id }, stock.ToStockDto());
         }
         // Patch updates only the required part, while put updates the entire document.
-        [HttpPut("{id}")]
+        [HttpPut("{id:int}")]
         public async Task<IActionResult> UpdateStock([FromRoute] int id, [FromBody] UpdateStockRequestDto updateStockDto)
         {
             var stock = await _stockRepository.UpdateAsync(id, updateStockDto);
@@ -61,7 +62,7 @@ namespace api.Controllers
 
         }
 
-        [HttpDelete("{id}")]
+        [HttpDelete("{id:int}")]
         public async Task<IActionResult> DeleteStock([FromRoute] int id)
         {
             var stock = _stockRepository.DeleteAsync(id);

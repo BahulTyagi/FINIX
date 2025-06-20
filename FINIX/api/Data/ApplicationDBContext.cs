@@ -1,9 +1,11 @@
 ﻿using api.Models;
+using Microsoft.AspNetCore.Identity;
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 
 namespace api.Data
 {
-    public class ApplicationDBContext : DbContext
+    public class ApplicationDBContext : IdentityDbContext<AppUser>
     {
         public ApplicationDBContext(DbContextOptions DbContextOptions) : base(DbContextOptions) 
         { 
@@ -62,6 +64,29 @@ namespace api.Data
                     Industry = "Technology",
                     MarketCap = 2300000000000
                 } );
+
+
+
+            modelBuilder.Entity<IdentityRole>().HasData(
+                new List<IdentityRole>
+                {
+                    new IdentityRole {
+                        Id="1",
+                        Name="Admin",
+                        NormalizedName="ADMIN",
+                        ConcurrencyStamp="hey"
+                    },
+                    new IdentityRole
+                    {
+                        Id="2",
+                        Name="User",
+                        NormalizedName="USER",
+                        ConcurrencyStamp="hello"
+                    }
+                }
+               );
         }
+
+
     }
 }

@@ -1,6 +1,7 @@
 ﻿    using api.Data;
     using api.Dtos.Stock;
-    using api.Interfaces;
+using api.Helper;
+using api.Interfaces;
     using api.Mapper;
     using api.Models;
     using Microsoft.AspNetCore.Mvc;
@@ -17,10 +18,29 @@
             }
 
 
-            public async Task<List<Stock>> GetAllAsync()
+            public async Task<List<Stock>> GetAllAsync(QueryObject query)
             {
-                var stocks = await _dbContext.Stocks.Include(c=>c.comment).ToListAsync();
-                return stocks;
+                var stocks = _dbContext.Stocks.Include(c=>c.comment).AsQueryable();
+
+                if(!string.IsNullOrWhiteSpace(query.CompanyName))
+                {
+                stocks = stocks.Where(s => s.CompanyName.Contains(query.CompanyName));
+                }
+
+                if (!string.IsNullOrWhiteSpace(query.Symbol))
+                {
+                    stocks = stocks.Where(s => s.Symbol.Contains(query.Symbol));
+                }
+
+                if(!string.IsNullOrWhiteSpace(query.SortBy))
+                {
+                    if(query.SortBy.Equals("Symbol", StringComparison.OrdinalIgnoreCase))
+                    {
+                    stocks = query.IsDescending ? stocks.OrderByDescending(s => s.Symbol) : stocks.OrderBy(s => s.Symbol);
+                    }
+                }
+
+                return await stocks.ToListAsync();
 
             }
 
