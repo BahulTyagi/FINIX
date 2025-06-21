@@ -12,8 +12,8 @@ using api.Data;
 namespace api.Migrations
 {
     [DbContext(typeof(ApplicationDBContext))]
-    [Migration("20250620082237_seedRole")]
-    partial class seedRole
+    [Migration("20250620130559_Initial")]
+    partial class Initial
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -50,22 +50,6 @@ namespace api.Migrations
                         .HasFilter("[NormalizedName] IS NOT NULL");
 
                     b.ToTable("AspNetRoles", (string)null);
-
-                    b.HasData(
-                        new
-                        {
-                            Id = "1",
-                            ConcurrencyStamp = "hey",
-                            Name = "Admin",
-                            NormalizedName = "ADMIN"
-                        },
-                        new
-                        {
-                            Id = "2",
-                            ConcurrencyStamp = "hello",
-                            Name = "User",
-                            NormalizedName = "USER"
-                        });
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<string>", b =>
@@ -265,25 +249,22 @@ namespace api.Migrations
 
                     b.HasIndex("StockId");
 
-                    b.ToTable("Comments");
+                    b.ToTable("Comment");
+                });
 
-                    b.HasData(
-                        new
-                        {
-                            Id = 1,
-                            Content = "Apple launches new iPhone.",
-                            CreatedOn = new DateTime(2024, 10, 5, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            StockId = 10,
-                            Title = "Apple News"
-                        },
-                        new
-                        {
-                            Id = 3,
-                            Content = "Stocks fluctuate after Fed announcement.",
-                            CreatedOn = new DateTime(2024, 12, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            StockId = 20,
-                            Title = "Market Overview"
-                        });
+            modelBuilder.Entity("api.Models.Portfolio", b =>
+                {
+                    b.Property<string>("AppUserId")
+                        .HasColumnType("nvarchar(450)");
+
+                    b.Property<int>("StockId")
+                        .HasColumnType("int");
+
+                    b.HasKey("AppUserId", "StockId");
+
+                    b.HasIndex("StockId");
+
+                    b.ToTable("Portfolio");
                 });
 
             modelBuilder.Entity("api.Models.Stock", b =>
@@ -321,31 +302,7 @@ namespace api.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Stocks");
-
-                    b.HasData(
-                        new
-                        {
-                            Id = 10,
-                            CompanyName = "Apple Inc.",
-                            Description = "Consumer electronics and software company",
-                            Industry = "Technology",
-                            LastDiv = 0.82m,
-                            MarketCap = 2500000000000L,
-                            Purchase = 150.00m,
-                            Symbol = "AAPL"
-                        },
-                        new
-                        {
-                            Id = 20,
-                            CompanyName = "Microsoft Corporation",
-                            Description = "Software and cloud computing",
-                            Industry = "Technology",
-                            LastDiv = 0.75m,
-                            MarketCap = 2300000000000L,
-                            Purchase = 280.00m,
-                            Symbol = "MSFT"
-                        });
+                    b.ToTable("Stock");
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<string>", b =>
@@ -408,8 +365,34 @@ namespace api.Migrations
                     b.Navigation("Stock");
                 });
 
+            modelBuilder.Entity("api.Models.Portfolio", b =>
+                {
+                    b.HasOne("api.Models.AppUser", "AppUser")
+                        .WithMany("Portfolios")
+                        .HasForeignKey("AppUserId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("api.Models.Stock", "Stock")
+                        .WithMany("Portfolios")
+                        .HasForeignKey("StockId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("AppUser");
+
+                    b.Navigation("Stock");
+                });
+
+            modelBuilder.Entity("api.Models.AppUser", b =>
+                {
+                    b.Navigation("Portfolios");
+                });
+
             modelBuilder.Entity("api.Models.Stock", b =>
                 {
+                    b.Navigation("Portfolios");
+
                     b.Navigation("comment");
                 });
 #pragma warning restore 612, 618
