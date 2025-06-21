@@ -18,5 +18,6 @@ namespace api.Interfaces
 
         public Task<bool> StockExists(int id); 
 
+        public Task<Stock?> GetBySymbolAsync(string symbol);
     }
 }

@@ -13,7 +13,8 @@ namespace api.Mapper
                 CreatedOn = comment.CreatedOn,
                 Title = comment.Title,
                 Content = comment.Content,
-                StockId = comment.StockId
+                StockId = comment.StockId,
+                CreatedBy=comment.AppUser.UserName
             };
         }
 

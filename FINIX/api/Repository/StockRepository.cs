@@ -20,7 +20,7 @@ using api.Interfaces;
 
             public async Task<List<Stock>> GetAllAsync(QueryObject query)
             {
-                var stocks = _dbContext.Stocks.Include(c=>c.comment).AsQueryable();
+                var stocks = _dbContext.Stocks.Include(c=>c.comment).ThenInclude(a=>a.AppUser).AsQueryable();
 
                 if(!string.IsNullOrWhiteSpace(query.CompanyName))
                 {
@@ -79,7 +79,7 @@ using api.Interfaces;
 
             public async Task<Stock?> GetByIdAsync(int id)
             {
-                return await _dbContext.Stocks.Include(c => c.comment).FirstOrDefaultAsync(i=>i.Id==id);
+                return await _dbContext.Stocks.Include(c => c.comment).ThenInclude(a => a.AppUser).FirstOrDefaultAsync(i=>i.Id==id);
             }
 
             public async Task<Stock?> UpdateAsync(int id, UpdateStockRequestDto updateStockDto)
@@ -108,6 +108,11 @@ using api.Interfaces;
         public async Task<bool> StockExists(int id)
         {
             return await _dbContext.Stocks.AnyAsync(x => x.Id==id);
+        }
+
+        public async Task<Stock?> GetBySymbolAsync(string symbol)
+        {
+            return await _dbContext.Stocks.FirstOrDefaultAsync(x=>x.Symbol==symbol);
         }
     }
     }

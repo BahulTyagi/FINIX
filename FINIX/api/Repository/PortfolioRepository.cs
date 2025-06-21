@@ -1,6 +1,8 @@
 ﻿using api.Data;
 using api.Interfaces;
 using api.Models;
+using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 
 namespace api.Repository
@@ -12,6 +14,28 @@ namespace api.Repository
         {
             _dbContext = dBContext;
         }
+
+        public async Task<Portfolio> CreateAsync(Portfolio portfolio)
+        {
+            await _dbContext.Portfolios.AddAsync(portfolio);
+            await _dbContext.SaveChangesAsync();
+
+            return portfolio;
+        }
+
+        public async Task<Portfolio> DeletePortfolioAsync(AppUser appUser, string symbol)
+        {
+            var portfolioModel = await _dbContext.Portfolios.FirstOrDefaultAsync(x => x.AppUserId == appUser.Id && x.Stock.Symbol.ToLower() == symbol.ToLower());
+
+            if (portfolioModel == null)
+                return null;
+
+            _dbContext.Portfolios.Remove(portfolioModel);
+            await _dbContext.SaveChangesAsync();
+
+            return portfolioModel;
+        }
+
         public async Task<List<Stock>> GetUserPortfolio(AppUser user)
         {
            return await _dbContext.Portfolios.Where(x=>x.AppUserId== user.Id)
@@ -26,5 +50,7 @@ namespace api.Repository
                     MarketCap=stock.Stock.MarketCap
                 }).ToListAsync();
         }
+
+        
     }
 }

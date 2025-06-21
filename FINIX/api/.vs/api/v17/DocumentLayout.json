@@ -3,36 +3,40 @@
   "WorkspaceRootPath": "D:\\Git\\FINIX\\api\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{EE75E19B-FA00-4A18-B19C-D1837AB30124}|api.csproj|d:\\git\\finix\\api\\repository\\portfoliorepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{EE75E19B-FA00-4A18-B19C-D1837AB30124}|api.csproj|solutionrelative:repository\\portfoliorepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{EE75E19B-FA00-4A18-B19C-D1837AB30124}|api.csproj|d:\\git\\finix\\api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{EE75E19B-FA00-4A18-B19C-D1837AB30124}|api.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{EE75E19B-FA00-4A18-B19C-D1837AB30124}|api.csproj|d:\\git\\finix\\api\\service\\fmpservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EE75E19B-FA00-4A18-B19C-D1837AB30124}|api.csproj|solutionrelative:service\\fmpservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{EE75E19B-FA00-4A18-B19C-D1837AB30124}|api.csproj|d:\\git\\finix\\api\\controllers\\portfoliocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{EE75E19B-FA00-4A18-B19C-D1837AB30124}|api.csproj|solutionrelative:controllers\\portfoliocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{EE75E19B-FA00-4A18-B19C-D1837AB30124}|api.csproj|d:\\git\\finix\\api\\controllers\\accountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{EE75E19B-FA00-4A18-B19C-D1837AB30124}|api.csproj|solutionrelative:controllers\\accountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{EE75E19B-FA00-4A18-B19C-D1837AB30124}|api.csproj|d:\\git\\finix\\api\\dtos\\stock\\fmpstock.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EE75E19B-FA00-4A18-B19C-D1837AB30124}|api.csproj|solutionrelative:dtos\\stock\\fmpstock.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{EE75E19B-FA00-4A18-B19C-D1837AB30124}|api.csproj|d:\\git\\finix\\api\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{EE75E19B-FA00-4A18-B19C-D1837AB30124}|api.csproj|solutionrelative:appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+      "AbsoluteMoniker": "D:0:0:{EE75E19B-FA00-4A18-B19C-D1837AB30124}|api.csproj|d:\\git\\finix\\api\\models\\stock.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EE75E19B-FA00-4A18-B19C-D1837AB30124}|api.csproj|solutionrelative:models\\stock.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EE75E19B-FA00-4A18-B19C-D1837AB30124}|api.csproj|d:\\git\\finix\\api\\interfaces\\ifmpservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EE75E19B-FA00-4A18-B19C-D1837AB30124}|api.csproj|solutionrelative:interfaces\\ifmpservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EE75E19B-FA00-4A18-B19C-D1837AB30124}|api.csproj|d:\\git\\finix\\api\\controllers\\stockcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EE75E19B-FA00-4A18-B19C-D1837AB30124}|api.csproj|solutionrelative:controllers\\stockcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{EE75E19B-FA00-4A18-B19C-D1837AB30124}|api.csproj|d:\\git\\finix\\api\\controllers\\commentcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{EE75E19B-FA00-4A18-B19C-D1837AB30124}|api.csproj|solutionrelative:controllers\\commentcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{EE75E19B-FA00-4A18-B19C-D1837AB30124}|api.csproj|d:\\git\\finix\\api\\service\\tokenservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{EE75E19B-FA00-4A18-B19C-D1837AB30124}|api.csproj|solutionrelative:service\\tokenservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{EE75E19B-FA00-4A18-B19C-D1837AB30124}|api.csproj|d:\\git\\finix\\api\\mapper\\stockmappers.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EE75E19B-FA00-4A18-B19C-D1837AB30124}|api.csproj|solutionrelative:mapper\\stockmappers.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{EE75E19B-FA00-4A18-B19C-D1837AB30124}|api.csproj|d:\\git\\finix\\api\\extensions\\claimsextensions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{EE75E19B-FA00-4A18-B19C-D1837AB30124}|api.csproj|solutionrelative:extensions\\claimsextensions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{EE75E19B-FA00-4A18-B19C-D1837AB30124}|api.csproj|d:\\git\\finix\\api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EE75E19B-FA00-4A18-B19C-D1837AB30124}|api.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -42,110 +46,123 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 7,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Program.cs",
-              "DocumentMoniker": "D:\\Git\\FINIX\\api\\Program.cs",
-              "RelativeDocumentMoniker": "Program.cs",
-              "ToolTip": "D:\\Git\\FINIX\\api\\Program.cs",
-              "RelativeToolTip": "Program.cs",
-              "ViewState": "AgIAACUAAAAAAAAAAAAuwC4AAAADAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-21T13:33:45.02Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "PortfolioRepository.cs",
-              "DocumentMoniker": "D:\\Git\\FINIX\\api\\Repository\\PortfolioRepository.cs",
-              "RelativeDocumentMoniker": "Repository\\PortfolioRepository.cs",
-              "ToolTip": "D:\\Git\\FINIX\\api\\Repository\\PortfolioRepository.cs",
-              "RelativeToolTip": "Repository\\PortfolioRepository.cs",
-              "ViewState": "AgIAAAsAAAAAAAAAAAAcwAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-21T13:29:54.537Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "TokenService.cs",
-              "DocumentMoniker": "D:\\Git\\FINIX\\api\\Service\\TokenService.cs",
-              "RelativeDocumentMoniker": "Service\\TokenService.cs",
-              "ToolTip": "D:\\Git\\FINIX\\api\\Service\\TokenService.cs",
-              "RelativeToolTip": "Service\\TokenService.cs",
-              "ViewState": "AgIAAAsAAAAAAAAAAAA0wAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-21T13:28:20.307Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "ClaimsExtensions.cs",
-              "DocumentMoniker": "D:\\Git\\FINIX\\api\\Extensions\\ClaimsExtensions.cs",
-              "RelativeDocumentMoniker": "Extensions\\ClaimsExtensions.cs",
-              "ToolTip": "D:\\Git\\FINIX\\api\\Extensions\\ClaimsExtensions.cs",
-              "RelativeToolTip": "Extensions\\ClaimsExtensions.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAMAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-20T15:44:24.434Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 3,
-              "Title": "AccountController.cs",
-              "DocumentMoniker": "D:\\Git\\FINIX\\api\\Controllers\\AccountController.cs",
-              "RelativeDocumentMoniker": "Controllers\\AccountController.cs",
-              "ToolTip": "D:\\Git\\FINIX\\api\\Controllers\\AccountController.cs",
-              "RelativeToolTip": "Controllers\\AccountController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAE0AAAAQAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-20T15:31:45.596Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "CommentController.cs",
-              "DocumentMoniker": "D:\\Git\\FINIX\\api\\Controllers\\CommentController.cs",
-              "RelativeDocumentMoniker": "Controllers\\CommentController.cs",
-              "ToolTip": "D:\\Git\\FINIX\\api\\Controllers\\CommentController.cs",
-              "RelativeToolTip": "Controllers\\CommentController.cs",
+              "Title": "Stock.cs",
+              "DocumentMoniker": "D:\\Git\\FINIX\\api\\Models\\Stock.cs",
+              "RelativeDocumentMoniker": "Models\\Stock.cs",
+              "ToolTip": "D:\\Git\\FINIX\\api\\Models\\Stock.cs",
+              "RelativeToolTip": "Models\\Stock.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-20T15:31:44.592Z",
+              "WhenOpened": "2025-06-21T16:48:33.415Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "appsettings.json",
-              "DocumentMoniker": "D:\\Git\\FINIX\\api\\appsettings.json",
-              "RelativeDocumentMoniker": "appsettings.json",
-              "ToolTip": "D:\\Git\\FINIX\\api\\appsettings.json",
-              "RelativeToolTip": "appsettings.json",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAGAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2025-06-20T15:27:09.578Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 1,
               "Title": "PortfolioController.cs",
               "DocumentMoniker": "D:\\Git\\FINIX\\api\\Controllers\\PortfolioController.cs",
               "RelativeDocumentMoniker": "Controllers\\PortfolioController.cs",
               "ToolTip": "D:\\Git\\FINIX\\api\\Controllers\\PortfolioController.cs",
               "RelativeToolTip": "Controllers\\PortfolioController.cs",
-              "ViewState": "AgIAABEAAAAAAAAAAIA4wBsAAAAVAAAAAAAAAA==",
+              "ViewState": "AgIAACwAAAAAAAAAAIA5wC8AAAAMAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-20T15:24:42.812Z",
+              "WhenOpened": "2025-06-21T16:25:00.587Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "CommentController.cs",
+              "DocumentMoniker": "D:\\Git\\FINIX\\api\\Controllers\\CommentController.cs",
+              "RelativeDocumentMoniker": "Controllers\\CommentController.cs",
+              "ToolTip": "D:\\Git\\FINIX\\api\\Controllers\\CommentController.cs",
+              "RelativeToolTip": "Controllers\\CommentController.cs",
+              "ViewState": "AgIAADIAAAAAAAAAAAAswDwAAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-21T15:35:36.053Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "StockController.cs",
+              "DocumentMoniker": "D:\\Git\\FINIX\\api\\Controllers\\StockController.cs",
+              "RelativeDocumentMoniker": "Controllers\\StockController.cs",
+              "ToolTip": "D:\\Git\\FINIX\\api\\Controllers\\StockController.cs",
+              "RelativeToolTip": "Controllers\\StockController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAfAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-21T14:54:53.767Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "Program.cs",
+              "DocumentMoniker": "D:\\Git\\FINIX\\api\\Program.cs",
+              "RelativeDocumentMoniker": "Program.cs",
+              "ToolTip": "D:\\Git\\FINIX\\api\\Program.cs",
+              "RelativeToolTip": "Program.cs",
+              "ViewState": "AgIAAFoAAAAAAAAAAAAAAGEAAAA6AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-21T15:33:21.53Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "StockMappers.cs",
+              "DocumentMoniker": "D:\\Git\\FINIX\\api\\Mapper\\StockMappers.cs",
+              "RelativeDocumentMoniker": "Mapper\\StockMappers.cs",
+              "ToolTip": "D:\\Git\\FINIX\\api\\Mapper\\StockMappers.cs",
+              "RelativeToolTip": "Mapper\\StockMappers.cs",
+              "ViewState": "AgIAABIAAAAAAAAAAAAqwC4AAAAjAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-21T15:22:11.115Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "FMPStock.cs",
+              "DocumentMoniker": "D:\\Git\\FINIX\\api\\Dtos\\Stock\\FMPStock.cs",
+              "RelativeDocumentMoniker": "Dtos\\Stock\\FMPStock.cs",
+              "ToolTip": "D:\\Git\\FINIX\\api\\Dtos\\Stock\\FMPStock.cs",
+              "RelativeToolTip": "Dtos\\Stock\\FMPStock.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAqwAwAAAASAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-21T15:18:59.488Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "FMPService.cs",
+              "DocumentMoniker": "D:\\Git\\FINIX\\api\\Service\\FMPService.cs",
+              "RelativeDocumentMoniker": "Service\\FMPService.cs",
+              "ToolTip": "D:\\Git\\FINIX\\api\\Service\\FMPService.cs",
+              "RelativeToolTip": "Service\\FMPService.cs",
+              "ViewState": "AgIAAA8AAAAAAAAAAIA7wB0AAAAUAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-21T15:06:03.764Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "IFMPService.cs",
+              "DocumentMoniker": "D:\\Git\\FINIX\\api\\Interfaces\\IFMPService.cs",
+              "RelativeDocumentMoniker": "Interfaces\\IFMPService.cs",
+              "ToolTip": "D:\\Git\\FINIX\\api\\Interfaces\\IFMPService.cs",
+              "RelativeToolTip": "Interfaces\\IFMPService.cs",
+              "ViewState": "AgIAAAEAAAAAAAAAAAAmwAYAAAAUAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-21T15:04:53.858Z",
               "EditorCaption": ""
             }
           ]
