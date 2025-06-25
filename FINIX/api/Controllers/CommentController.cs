@@ -1,8 +1,10 @@
 ﻿using api.Dtos.Comment;
 using api.Extensions;
+using api.Helper;
 using api.Interfaces;
 using api.Mapper;
 using api.Models;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
@@ -27,9 +29,10 @@ namespace api.Controllers
         }
 
         [HttpGet]
-        public async Task<IActionResult> GetAllComments()
+        [Authorize]
+        public async Task<IActionResult> GetAllComments([FromQuery]CommentQueryObject queryObject)
         {
-            var comments=await _commentRepo.GetAllAsync();
+            var comments=await _commentRepo.GetAllAsync(queryObject);
            
             var commentDto = comments.Select(s => s.ToCommentDto());
             return Ok(commentDto);
@@ -48,7 +51,7 @@ namespace api.Controllers
             }
         }
 
-        [HttpPost("{symbol:int}")]
+        [HttpPost("{symbol}")]
         public async Task<IActionResult> CreateComment([FromRoute]string symbol, [FromBody] CreateCommentDto commentDto)
         {
             if (!ModelState.IsValid) { 

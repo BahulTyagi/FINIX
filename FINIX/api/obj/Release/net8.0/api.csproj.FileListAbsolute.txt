@@ -176,3 +176,9 @@ D:\Git\FINIX\api\obj\Release\net8.0\refint\api.dll
 D:\Git\FINIX\api\obj\Release\net8.0\api.pdb
 D:\Git\FINIX\api\obj\Release\net8.0\api.genruntimeconfig.cache
 D:\Git\FINIX\api\obj\Release\net8.0\ref\api.dll
+D:\Git\FINIX\api\bin\Release\net8.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+D:\Git\FINIX\api\bin\Release\net8.0\Microsoft.AspNetCore.Cryptography.Internal.dll
+D:\Git\FINIX\api\bin\Release\net8.0\Microsoft.AspNetCore.Cryptography.KeyDerivation.dll
+D:\Git\FINIX\api\bin\Release\net8.0\Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll
+D:\Git\FINIX\api\bin\Release\net8.0\Microsoft.Extensions.Identity.Core.dll
+D:\Git\FINIX\api\bin\Release\net8.0\Microsoft.Extensions.Identity.Stores.dll

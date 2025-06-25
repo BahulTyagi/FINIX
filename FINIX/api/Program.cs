@@ -100,6 +100,13 @@ var app = builder.Build();
 
 // Configure the HTTP request pipeline.
 app.UseHttpsRedirection();
+app.UseCors(x => x
+                .AllowCredentials()
+                .AllowAnyHeader()
+                .AllowAnyMethod()
+                .SetIsOriginAllowed(origin => true)
+                //.WithOrigins("https://localhost:44351")
+                );
 app.UseAuthentication();
 app.UseAuthorization();
 app.UseSwagger();
